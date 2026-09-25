@@ -17,7 +17,7 @@
   --radius-lg: 1.45rem;
   --radius-md: 0.85rem;
   --radius-sm: 0.55rem;
-  --container: 78rem;
+  --container: 90rem;
   --header: 5.4rem;
   --serif: Georgia, "Times New Roman", Times, serif;
   --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -80,7 +80,7 @@ img, svg { display: block; max-width: 100%; }
 }
 .skip-link:focus { transform: none; }
 
-.container { width: min(calc(100% - 2.5rem), var(--container)); margin-inline: auto; }
+.container { width: min(calc(100% - 1.25rem), var(--container)); margin-inline: auto; }
 
 /* Header */
 .site-header {
@@ -297,6 +297,8 @@ img, svg { display: block; max-width: 100%; }
   align-self: center;
   padding: 4.7rem 2rem 4.25rem 5.25rem;
   position: relative;
+  top: 4.5rem;
+  margin-bottom: 4.5rem;
 }
 .hero h1 {
   margin: .9rem 0 0;
@@ -381,8 +383,8 @@ img, svg { display: block; max-width: 100%; }
 .hero-portrait {
   position: absolute;
   z-index: 3;
-  right: -1rem;
-  top: -1.3rem;
+  right: -2rem;
+  top: -2rem;
   height: calc(100% + 1.3rem);
   width: auto;
   max-width: min(96%, 34rem);
@@ -414,7 +416,7 @@ img, svg { display: block; max-width: 100%; }
   position: absolute;
   z-index: 5;
   right: 2.25rem;
-  bottom: 2.35rem;
+  bottom: 3.85rem;
   width: min(20rem, calc(100% - 4rem));
   display: grid;
   gap: .52rem;
@@ -868,7 +870,7 @@ body.js-ready .project-strip {
 
 @media (max-width: 700px) {
   :root { --header: 4.7rem; --radius-xl: 1.4rem; }
-  .container { width: min(calc(100% - 1.2rem), var(--container)); }
+  .container { width: min(calc(100% - 0.75rem), var(--container)); }
   .resume-link { display: none; }
   .brand { font-size: .83rem; }
   .hero { padding-top: .95rem; }
