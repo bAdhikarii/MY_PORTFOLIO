@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace https://example.com with the verified production domain before deployment. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/</loc></url>
+  <url><loc>https://example.com/about/</loc></url>
+  <url><loc>https://example.com/work/</loc></url>
+  <url><loc>https://example.com/work/consica-labs/</loc></url>
+  <url><loc>https://example.com/work/nexora/</loc></url>
+  <url><loc>https://example.com/work/consica-map/</loc></url>
+  <url><loc>https://example.com/work/esp-rc-remote/</loc></url>
+  <url><loc>https://example.com/work/consica-sim/</loc></url>
+  <url><loc>https://example.com/work/educational-technology/</loc></url>
+  <url><loc>https://example.com/consica-labs/</loc></url>
+  <url><loc>https://example.com/experience/</loc></url>
+  <url><loc>https://example.com/expertise/</loc></url>
+  <url><loc>https://example.com/education/</loc></url>
+  <url><loc>https://example.com/writing/</loc></url>
+  <url><loc>https://example.com/contact/</loc></url>
+  <url><loc>https://example.com/resume/</loc></url>
+  <url><loc>https://example.com/privacy/</loc></url>
+</urlset>

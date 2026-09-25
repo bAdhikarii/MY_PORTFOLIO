@@ -1,0 +1,292 @@
+[
+  {
+    "id": "consica-labs",
+    "slug": "consica-labs",
+    "title": "Consica Labs",
+    "subtitle": "A technology company building software and educational systems.",
+    "description": "Consica Labs Pvt. Ltd. is Bikram Adhikari’s technology company, focused on software, AI, EdTech, SaaS, school systems, LMS products, robotics, innovation labs, mobile applications, and web applications.",
+    "category": "Company / Product Ecosystem",
+    "year": null,
+    "status": null,
+    "role": "Founder & CEO",
+    "technologies": [],
+    "problem": "Technology and education initiatives often need more than isolated features: they require coherent products, systems, and implementation thinking across software and learning environments.",
+    "context": "Consica Labs is the company context for a range of product, educational technology, software, and robotics initiatives represented throughout this portfolio.",
+    "solution": "Build and connect software products, educational systems, robotics initiatives, and innovation-lab experiences under a focused technology company.",
+    "features": [
+      "Software products",
+      "AI initiatives",
+      "EdTech and LMS systems",
+      "School technology",
+      "Robotics and innovation labs",
+      "Mobile and web applications"
+    ],
+    "architecture": [
+      "Product-level architecture varies by initiative",
+      "Shared emphasis on maintainable systems and useful user experiences"
+    ],
+    "challenges": [
+      "Balancing product breadth with coherent technical systems",
+      "Connecting educational and engineering goals without treating them as separate disciplines"
+    ],
+    "decisions": [
+      "Keep the personal portfolio distinct from the company identity",
+      "Present Consica Labs as the organizational context for selected products rather than as a substitute for Bikram’s personal work"
+    ],
+    "outcome": null,
+    "lessons": [
+      "Build systems around real problems, not technology for its own sake",
+      "Treat product thinking, engineering, and education as connected practices"
+    ],
+    "future": [
+      "Verified company milestones and product updates can be added as they are published."
+    ],
+    "links": [],
+    "images": [],
+    "featured": true
+  },
+  {
+    "id": "nexora",
+    "slug": "nexora",
+    "title": "NEXORA",
+    "subtitle": "Skill-to-Opportunity Network.",
+    "description": "A product concept centered on a progression from learning to building, proving capability, connecting with others, and discovering opportunities.",
+    "category": "EdTech / AI / Community",
+    "year": null,
+    "status": null,
+    "role": null,
+    "technologies": [
+      "AI"
+    ],
+    "problem": "Learning a skill does not automatically create visible evidence of capability or a path toward meaningful opportunities.",
+    "context": "NEXORA is framed around the principle: Learn → Build → Prove → Connect → Discover Opportunities.",
+    "solution": "Create a skill-to-opportunity network where learning is connected to project building, proof of work, community, and opportunity discovery.",
+    "features": [
+      "Learning pathways",
+      "Project building",
+      "Skill development",
+      "Community",
+      "Opportunity discovery",
+      "AI-assisted learning",
+      "Code Lab",
+      "Robotic Lab",
+      "Playground"
+    ],
+    "architecture": [
+      "Learning layer",
+      "Project and proof-of-work layer",
+      "Community and connection layer",
+      "Opportunity discovery layer",
+      "AI-assisted learning capabilities"
+    ],
+    "challenges": [
+      "Keeping learning connected to demonstrable work",
+      "Designing a system that supports different stages of skill development"
+    ],
+    "decisions": [
+      "Use proof of work as a bridge between learning and opportunity",
+      "Treat labs and project environments as part of the learning system rather than separate add-ons"
+    ],
+    "outcome": null,
+    "lessons": [
+      "A learning product becomes more useful when users can build and demonstrate capability inside the same ecosystem."
+    ],
+    "future": [
+      "Product status, release scope, and verified outcomes can be added when available."
+    ],
+    "links": [],
+    "images": [],
+    "featured": true
+  },
+  {
+    "id": "consica-map",
+    "slug": "consica-map",
+    "title": "CONSICA MAP",
+    "subtitle": "A virtual driving-world and map-engine experiment.",
+    "description": "An engineering experiment and product system exploring virtual driving environments, map engines, road generation, vehicle movement, and simulation concepts.",
+    "category": "Simulation / Engineering",
+    "year": null,
+    "status": null,
+    "role": null,
+    "technologies": [],
+    "problem": "Driving simulations need a structured world model that can represent roads, motion, and vehicle behavior in a coherent environment.",
+    "context": "CONSICA MAP explores the technical building blocks behind a virtual driving world rather than presenting a static map interface.",
+    "solution": "Develop a map-engine-oriented system that can generate road structures and support vehicle movement and simulation behavior.",
+    "features": [
+      "Virtual driving environment",
+      "Map engine concepts",
+      "Road generation",
+      "Vehicle movement",
+      "Simulation systems"
+    ],
+    "architecture": [
+      "World/map representation",
+      "Road-generation layer",
+      "Vehicle movement layer",
+      "Simulation state"
+    ],
+    "challenges": [
+      "Representing road systems in a way that supports movement",
+      "Keeping simulation logic and environment structure understandable as complexity grows"
+    ],
+    "decisions": [
+      "Model the project as a system of connected simulation layers rather than a visual-only map"
+    ],
+    "outcome": null,
+    "lessons": [
+      "Simulation projects become easier to evolve when environment, movement, and state are treated as separate but connected systems."
+    ],
+    "future": [
+      "Verified implementation details and demonstrations can be added when published."
+    ],
+    "links": [],
+    "images": [],
+    "featured": true
+  },
+  {
+    "id": "esp-rc-remote",
+    "slug": "esp-rc-remote",
+    "title": "ESP / RC Vehicle Remote",
+    "subtitle": "A Flutter-based control interface for ESP-powered physical vehicles.",
+    "description": "A mobile remote-control application for physical ESP-powered vehicles, combining connectivity, steering, telemetry, and driving-oriented interface concepts.",
+    "category": "Mobile / Robotics / Embedded",
+    "year": null,
+    "status": null,
+    "role": null,
+    "technologies": [
+      "Flutter",
+      "Bluetooth",
+      "Wi-Fi",
+      "ESP32"
+    ],
+    "problem": "A physical RC or ESP-powered vehicle needs a control interface that can communicate clearly, expose driving state, and translate user input into vehicle commands.",
+    "context": "The project connects a mobile user interface with embedded hardware through Bluetooth and Wi-Fi concepts.",
+    "solution": "Build a focused Flutter application for steering, speed control, connectivity, telemetry, and simulation-oriented vehicle interaction.",
+    "features": [
+      "Vehicle control",
+      "Steering",
+      "Speedometer",
+      "Telemetry",
+      "Bluetooth connectivity",
+      "Wi-Fi connectivity",
+      "Simulation concepts"
+    ],
+    "architecture": [
+      "Flutter control interface",
+      "Connectivity layer",
+      "Command/state layer",
+      "ESP32 vehicle endpoint",
+      "Telemetry feedback"
+    ],
+    "challenges": [
+      "Keeping controls responsive while communicating with hardware",
+      "Presenting telemetry without distracting from core vehicle control"
+    ],
+    "decisions": [
+      "Prioritize direct control and legibility over dashboard complexity",
+      "Keep hardware communication isolated from presentation logic"
+    ],
+    "outcome": null,
+    "lessons": [
+      "Hardware/software products require the interface, communication layer, and physical behavior to be designed as one system."
+    ],
+    "future": [
+      "Verified hardware revisions and control protocols can be documented when available."
+    ],
+    "links": [],
+    "images": [],
+    "featured": true
+  },
+  {
+    "id": "consica-sim",
+    "slug": "consica-sim",
+    "title": "ConsicaSim",
+    "subtitle": "A virtual robotics studio and simulation environment.",
+    "description": "An educational and technical environment for exploring robotics through simulation, virtual experimentation, and system thinking.",
+    "category": "Robotics / Education / Simulation",
+    "year": null,
+    "status": null,
+    "role": null,
+    "technologies": [],
+    "problem": "Robotics learning can be constrained by hardware access, setup time, and the difficulty of testing ideas safely and repeatedly.",
+    "context": "ConsicaSim connects robotics education with virtual experimentation and simulation-oriented learning.",
+    "solution": "Provide a virtual studio where robotics concepts can be explored through simulated systems before or alongside physical hardware work.",
+    "features": [
+      "Virtual robotics",
+      "Simulation environment",
+      "Educational experimentation",
+      "Robotics concepts"
+    ],
+    "architecture": [
+      "Simulation environment",
+      "Robotics model layer",
+      "Learning interaction layer"
+    ],
+    "challenges": [
+      "Making technical systems understandable to learners",
+      "Keeping the simulation useful without pretending it replaces physical hardware experience"
+    ],
+    "decisions": [
+      "Use simulation as a bridge into robotics concepts",
+      "Keep educational clarity central to technical design"
+    ],
+    "outcome": null,
+    "lessons": [
+      "Simulation can reduce the distance between understanding a robotics idea and experimenting with it."
+    ],
+    "future": [
+      "Specific simulator capabilities can be documented as verified product information becomes available."
+    ],
+    "links": [],
+    "images": [],
+    "featured": true
+  },
+  {
+    "id": "educational-technology",
+    "slug": "educational-technology",
+    "title": "Educational Technology Projects",
+    "subtitle": "School systems, robotics initiatives, and technology-enabled learning.",
+    "description": "A portfolio area for school technology systems, educational software, student-focused technical projects, robotics initiatives, and innovation-lab work.",
+    "category": "Education / EdTech",
+    "year": null,
+    "status": null,
+    "role": null,
+    "technologies": [],
+    "problem": "Educational technology is most useful when it supports real teaching, learning, experimentation, and school workflows rather than adding technology without purpose.",
+    "context": "Bikram’s teaching work and product work intersect through coding, AI, robotics, school technology, student projects, and innovation labs.",
+    "solution": "Design and build educational technology initiatives that connect classroom understanding with hands-on technical systems and product thinking.",
+    "features": [
+      "Computer Science education",
+      "Coding initiatives",
+      "AI learning",
+      "Robotics education",
+      "School technology",
+      "Student projects",
+      "Innovation labs"
+    ],
+    "architecture": [
+      "Education needs and workflows",
+      "Learning experiences",
+      "Software or robotics systems",
+      "Iteration through teaching and use"
+    ],
+    "challenges": [
+      "Keeping tools aligned with teaching goals",
+      "Designing for learners with different levels of technical confidence"
+    ],
+    "decisions": [
+      "Let teaching experience inform product decisions",
+      "Favor useful, understandable systems over novelty"
+    ],
+    "outcome": null,
+    "lessons": [
+      "Teaching reveals where technology is clear, where it creates friction, and where better product design can help."
+    ],
+    "future": [
+      "Individual initiatives can be split into their own case studies as verified details are published."
+    ],
+    "links": [],
+    "images": [],
+    "featured": false
+  }
+]
