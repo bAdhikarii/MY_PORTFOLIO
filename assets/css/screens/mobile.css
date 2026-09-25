@@ -42,6 +42,8 @@
   .section-heading h2 { font-size: clamp(2.45rem, 11vw, 3.5rem); }
   .snapshot-grid { grid-template-columns: 1fr; }
   .cap-grid, .expertise-grid, .principle-grid, .tech-grid, .teaching-grid, .company-grid { grid-template-columns: 1fr; }
+  .company-grid > :nth-child(n) { border-right: 0; border-bottom: 1px solid var(--border); }
+  .company-grid > :last-child { border-bottom: 0; }
   .principle { min-height: 0; }
   .case-meta { grid-template-columns: 1fr; }
   .detail-section { grid-template-columns: 1fr; gap: 1rem; }
@@ -62,3 +64,5 @@
   p, h1, h2, h3, li { overflow-wrap: break-word; }
   .btn { min-height: 2.9rem; }
   .project-visual { aspect-ratio: 16 / 10; }
+  .selected-work .project-list { flex-direction: column; }
+  .selected-work .project-row { flex: 1 1 auto; }

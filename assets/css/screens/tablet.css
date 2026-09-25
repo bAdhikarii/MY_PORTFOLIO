@@ -26,6 +26,8 @@
   .strip-item { border-left: 0; border-top: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent); padding: 1rem 0; }
   .split, .split.equal, .split.narrow-left, .contact-grid { grid-template-columns: 1fr; gap: 3.2rem; }
   .project-row { grid-template-columns: 1fr; gap: 2rem; }
+  .selected-work .project-list { flex-wrap: wrap; }
+  .selected-work .project-row { flex: 1 1 calc(50% - .5rem); }
   .cap-grid, .expertise-grid { grid-template-columns: repeat(2, 1fr); }
   .principle-grid { grid-template-columns: repeat(2, 1fr); }
   .tech-grid { grid-template-columns: repeat(2, 1fr); }
