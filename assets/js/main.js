@@ -60,4 +60,51 @@
       if(notice){notice.textContent='Your email app should open with this message prepared. The website itself does not submit messages to a server.';notice.hidden=false;}
     });
   }
+
+  /* Brand hover spotlight: hovering/focusing the top-bar name shows the
+     signature + name in a transparent centered popup with blurred backdrop.
+     Overlay is pointer-events:none so the brand link stays clickable. */
+  (function brandPreview(){
+    var brand=document.querySelector('.brand');
+    if(!brand) return;
+    var prefix='';
+    try {
+      var cssLink=document.querySelector('link[href$="assets/css/base.css"]');
+      if(cssLink){ prefix=cssLink.getAttribute('href').replace(/assets\/css\/base\.css$/, ''); }
+    } catch(e){}
+    var overlay=document.createElement('div');
+    overlay.className='brand-preview-overlay';
+    overlay.setAttribute('aria-hidden','true');
+    var card=document.createElement('div');
+    card.className='brand-preview-card';
+    var sig=document.createElement('img');
+    sig.className='brand-preview-signature';
+    sig.src=prefix+'assets/images/signature.png';
+    sig.alt='Bikram Adhikari signature';
+    sig.width=640; sig.height=433; sig.decoding='async';
+    var name=document.createElement('p');
+    name.className='brand-preview-name';
+    name.textContent='Bikram Adhikari';
+    var sub=document.createElement('p');
+    sub.className='brand-preview-sub';
+    sub.textContent='Technology Entrepreneur · Software Engineer · Educator';
+    var bio=document.createElement('p');
+    bio.className='brand-preview-bio';
+    bio.innerHTML='I co-founded <strong>Consica Labs</strong> with a vision to build meaningful technology for a global audience. As Founder &amp; CEO, I lead the development of products across <strong>AI, EdTech, SaaS, software, and robotics</strong>, turning ambitious ideas into real-world products, platforms, and technology ecosystems.';
+    card.appendChild(sig); card.appendChild(name); card.appendChild(sub); card.appendChild(bio);
+    overlay.appendChild(card);
+    document.body.appendChild(overlay);
+    function show(){ document.body.classList.add('brand-preview-open'); }
+    function hide(){ document.body.classList.remove('brand-preview-open'); }
+    var canHover=false;
+    try { canHover=window.matchMedia('(hover: hover)').matches; } catch(e){ canHover=true; }
+    if(canHover){
+      brand.addEventListener('mouseenter', show);
+      brand.addEventListener('mouseleave', hide);
+    }
+    brand.addEventListener('focusin', show);
+    brand.addEventListener('focusout', hide);
+    brand.addEventListener('click', hide);
+    window.addEventListener('scroll', hide, {passive:true});
+  })();
 })();
