@@ -637,6 +637,30 @@ img, svg { display: block; max-width: 100%; }
 }
 .project-visual.compact { aspect-ratio: 16 / 10; border-radius: var(--radius-lg); }
 .project-visual svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+/* Live platform previews embedded on the Work page */
+.project-visual iframe.preview-frame {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  border: 0; border-radius: inherit; background: #fff;
+}
+.project-visual a.preview-shot {
+  position: absolute; inset: 0; display: block;
+  border-radius: inherit; overflow: hidden;
+}
+.project-visual a.preview-shot img {
+  width: 100%; height: 100%; object-fit: cover; object-position: top center;
+}
+.preview-open {
+  position: absolute; right: .9rem; bottom: .9rem; z-index: 4;
+  display: inline-flex; align-items: center; gap: .35rem;
+  border-radius: 999px; padding: .45rem .8rem;
+  background: rgba(21,21,24,.85); color: #fff;
+  font-size: .72rem; font-weight: 650;
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+/* Transparent click-shield: iframe stays visible/animated but nothing
+   inside it can be clicked — only the pill button leaves the page. */
+.project-visual .preview-shield { position: absolute; inset: 0; z-index: 3; }
 .grid-bg {
   position: absolute;
   inset: 0;

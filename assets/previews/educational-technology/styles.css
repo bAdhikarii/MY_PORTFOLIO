@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: Inter, ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: #f6f6f3; color: #121214; font-size: 13px;
+  display: grid; place-items: center; padding: 12px; min-height: 100vh;
+}
+.ed {
+  width: min(600px, 100%);
+  border: 1px solid rgba(18,18,20,.13); border-radius: 14px;
+  background: #fbfbf9; padding: 12px 14px;
+  box-shadow: 0 12px 30px rgba(18,18,20,.08);
+}
+.ed-top { display: flex; align-items: center; gap: 8px; }
+.ed-logo {
+  display: grid; place-items: center; width: 26px; height: 26px;
+  border-radius: 8px; background: #0f7a3d; color: #fff; font-weight: 800;
+}
+.ed-name { font-weight: 800; letter-spacing: .08em; font-size: 12px; }
+.ed-live {
+  margin-left: auto; font-size: 10px; font-weight: 700; letter-spacing: .12em;
+  color: #0f7a3d; border: 1px solid rgba(15,122,61,.35); border-radius: 999px;
+  padding: 2px 8px; background: rgba(15,122,61,.08);
+}
+.ed-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0; }
+.ed-stats div { border: 1px solid rgba(18,18,20,.13); border-radius: 10px; padding: 6px; text-align: center; background: #fff; }
+.ed-stats strong { display: block; font-size: 19px; }
+.ed-stats small { color: #67676a; font-size: 11px; }
+.ed-cols { display: grid; grid-template-columns: 1.2fr .8fr; gap: 8px; }
+.ed-students, .ed-tasks {
+  list-style: none; margin: 0; padding: 10px;
+  border: 1px solid rgba(18,18,20,.13); border-radius: 10px; background: #fff;
+  display: grid; gap: 8px; align-content: start;
+}
+.ed-students li { display: grid; grid-template-columns: 64px 1fr 36px 26px; align-items: center; gap: 6px; font-size: 12px; }
+.ed-students span { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar { height: 7px; border-radius: 999px; background: #e4e4e1; overflow: hidden; }
+.bar i { display: block; height: 100%; background: #355fe5; border-radius: inherit; }
+.ed-students b { text-align: right; font-size: 11px; }
+.ed-students button {
+  width: 22px; height: 22px; border-radius: 50%; cursor: pointer;
+  border: 1px solid rgba(18,18,20,.2); background: #fff; color: #0f7a3d; font-size: 11px; font-weight: 800;
+}
+.ed-students li.graded { opacity: .55; }
+.ed-students li.graded button { background: #0f7a3d; border-color: #0f7a3d; color: #fff; }
+.ed-tasks li { font-size: 12px; }
+.ed-tasks label { display: flex; gap: 6px; align-items: center; cursor: pointer; }
+.ed-tasks input { accent-color: #0f7a3d; }
+#task-count { color: #67676a; font-size: 11px; border-top: 1px solid rgba(18,18,20,.1); padding-top: 6px; }

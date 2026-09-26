@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ConsicaSim — Robotics Simulation</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="sm">
+  <header class="sm-top">
+    <span class="sm-logo">S</span>
+    <span class="sm-name">CONSICASIM</span>
+    <span class="sm-live">LIVE DEMO</span>
+  </header>
+  <div class="sm-hud">
+    <div><small>STEPS</small><strong id="steps">0</strong></div>
+    <div><small>WAYPOINT</small><strong><span id="wp">1</span> / 5</strong></div>
+    <div><small>STATUS</small><strong id="status">Paused</strong></div>
+  </div>
+  <canvas id="sim" width="640" height="280"></canvas>
+  <div class="sm-foot">
+    <button id="play" type="button">Play</button>
+    <button id="reset" type="button">Reset</button>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

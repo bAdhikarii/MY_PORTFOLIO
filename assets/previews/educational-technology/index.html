@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EdTech Classroom — Learning Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="ed">
+  <header class="ed-top">
+    <span class="ed-logo">E</span>
+    <span class="ed-name">CLASSROOM OS</span>
+    <span class="ed-live">LIVE DEMO</span>
+  </header>
+  <div class="ed-stats">
+    <div><strong>248</strong><small>students</small></div>
+    <div><strong>12</strong><small>courses</small></div>
+    <div><strong id="done-pct">68%</strong><small>avg. completion</small></div>
+  </div>
+  <div class="ed-cols">
+    <ul class="ed-students">
+      <li><span>Aarav S.</span><div class="bar"><i style="width:92%"></i></div><b>92%</b><button type="button">✓</button></li>
+      <li><span>Diya M.</span><div class="bar"><i style="width:78%"></i></div><b>78%</b><button type="button">✓</button></li>
+      <li><span>Kabir R.</span><div class="bar"><i style="width:64%"></i></div><b>64%</b><button type="button">✓</button></li>
+      <li><span>Sneha K.</span><div class="bar"><i style="width:51%"></i></div><b>51%</b><button type="button">✓</button></li>
+    </ul>
+    <ul class="ed-tasks">
+      <li><label><input type="checkbox" checked> Robotics lab 04</label></li>
+      <li><label><input type="checkbox" checked> Python loops quiz</label></li>
+      <li><label><input type="checkbox"> AI ethics essay</label></li>
+      <li><label><input type="checkbox"> RC car telemetry</label></li>
+      <li id="task-count">2 of 4 tasks done</li>
+    </ul>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

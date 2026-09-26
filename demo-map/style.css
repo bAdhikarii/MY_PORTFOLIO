@@ -1,0 +1,117 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; }
+body {
+  font-family: Inter, ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: #0e0e11;
+  color: #f4f3ef;
+  user-select: none;
+  -webkit-user-select: none;
+}
+#scene { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+
+/* ---------- HUD ---------- */
+.hud {
+  position: fixed;
+  z-index: 10;
+  background: rgba(16, 16, 20, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(12px) saturate(130%);
+  backdrop-filter: blur(12px) saturate(130%);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  padding: 10px 14px;
+  font-size: 12px;
+  line-height: 1.5;
+  pointer-events: none;
+}
+.hud button { pointer-events: auto; }
+.hud[hidden] { display: none !important; }
+
+.hud-brand { top: 14px; left: 14px; }
+.brand-title { font-weight: 800; letter-spacing: 0.14em; font-size: 13px; }
+.brand-sub { color: #a8a7a2; font-size: 10px; letter-spacing: 0.22em; }
+
+.hud-gps { top: 14px; right: 14px; text-align: right; font-variant-numeric: tabular-nums; }
+.gps-label { font-size: 10px; letter-spacing: 0.22em; color: #a8a7a2; }
+.gps-coords { font-weight: 700; font-size: 13px; }
+.gps-road { color: #a8a7a2; font-size: 11px; }
+.gps-road span { color: #f4f3ef; }
+
+.hud-hints { left: 14px; bottom: 14px; color: #c9c8c4; font-size: 11px; }
+kbd {
+  display: inline-block; min-width: 20px; text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-bottom-width: 2px; border-radius: 5px;
+  background: rgba(255, 255, 255, 0.07);
+  font-family: inherit; font-size: 10px; font-weight: 700;
+  padding: 1px 5px; margin-right: 2px;
+}
+
+.hud-car {
+  left: 50%; bottom: 14px; transform: translateX(-50%);
+  display: flex; gap: 22px; text-align: center;
+  padding: 10px 22px;
+}
+.car-cell small, .hud-debug span { display: block; font-size: 10px; letter-spacing: 0.18em; color: #a8a7a2; }
+.car-cell strong { font-size: 17px; font-variant-numeric: tabular-nums; }
+
+.hud-offroad {
+  left: 50%; bottom: 86px; transform: translateX(-50%);
+  background: rgba(169, 36, 49, 0.78);
+  border-color: rgba(255, 255, 255, 0.25);
+  font-weight: 700; letter-spacing: 0.08em; font-size: 11px;
+  padding: 6px 14px;
+}
+
+.hud-mini { right: 14px; bottom: 14px; padding: 8px; text-align: center; }
+#minimap { display: block; width: 172px; height: 172px; border-radius: 8px; background: #0b0b0d; }
+.mini-label { font-size: 10px; letter-spacing: 0.22em; color: #a8a7a2; margin-top: 4px; }
+
+.hud-controls {
+  right: 14px; top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 6px; padding: 8px;
+}
+.hud-controls button {
+  width: 36px; height: 36px; border-radius: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.07); color: #fff;
+  font-size: 16px; cursor: pointer;
+}
+.hud-controls button:hover { background: rgba(255, 255, 255, 0.16); }
+
+.hud-selected {
+  left: 50%; top: 14px; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 10px;
+  pointer-events: auto;
+}
+.hud-selected span { color: #c9c8c4; font-size: 11px; }
+.hud-selected button {
+  border: 1px solid rgba(255,255,255,.2); background: transparent; color: #fff;
+  border-radius: 6px; cursor: pointer; font-size: 11px; padding: 2px 7px;
+}
+
+.hud-debug {
+  left: 14px; top: 50%; transform: translateY(-50%);
+  font-variant-numeric: tabular-nums; min-width: 190px;
+  display: grid; gap: 2px;
+}
+.hud-debug div { display: flex; justify-content: space-between; gap: 12px; font-size: 11px; }
+.hud-debug b { font-weight: 600; }
+
+@media (max-width: 760px) {
+  .hud-hints, .hud-debug { display: none; }
+  .hud-car { gap: 14px; padding: 8px 14px; bottom: 10px; }
+  .car-cell strong { font-size: 14px; }
+  #minimap { width: 120px; height: 120px; }
+  .hud-mini { bottom: 10px; right: 10px; }
+  .route-cell { display: none; }
+}
+
+/* Embed (?embed=1) kiosk mode for small card iframes: keep GPS + vehicle
+   readout, drop the rest so the world fills the frame. */
+.embed .hud-hints, .embed .hud-controls, .embed .hud-debug,
+.embed .hud-mini, .embed .hud-selected { display: none !important; }
+.embed .hud-brand { top: 8px; left: 8px; padding: 6px 10px; }
+.embed .hud-gps { top: 8px; right: 8px; padding: 6px 10px; }
+.embed .hud-car { bottom: 8px; padding: 6px 14px; gap: 14px; }
+.embed .hud-offroad { bottom: 64px; }

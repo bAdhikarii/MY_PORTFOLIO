@@ -61,16 +61,18 @@
     });
   }
 
-  /* Brand hover spotlight: hovering/focusing the top-bar name shows the
+  /* Brand hover spotlight: hovering/focusing the top-bar AVATAR shows the
      signature + name in a transparent centered popup with blurred backdrop.
-     Overlay is pointer-events:none so the brand link stays clickable. */
+     Name hover does nothing. Overlay is pointer-events:none so links stay
+     clickable. */
   (function brandPreview(){
     var brand=document.querySelector('.brand');
     if(!brand) return;
+    var trigger=brand.querySelector('.brand-avatar') || brand;
     var prefix='';
     try {
-      var cssLink=document.querySelector('link[href$="assets/css/base.css"]');
-      if(cssLink){ prefix=cssLink.getAttribute('href').replace(/assets\/css\/base\.css$/, ''); }
+      var cssLink=document.querySelector('link[href*="assets/css/base.css"]');
+      if(cssLink){ prefix=cssLink.getAttribute('href').replace(/assets\/css\/base\.css.*$/, ''); }
     } catch(e){}
     var overlay=document.createElement('div');
     overlay.className='brand-preview-overlay';
@@ -96,14 +98,15 @@
     document.body.appendChild(overlay);
     function show(){ document.body.classList.add('brand-preview-open'); }
     function hide(){ document.body.classList.remove('brand-preview-open'); }
+    try { trigger.setAttribute('tabindex','0'); } catch(e){}
     var canHover=false;
     try { canHover=window.matchMedia('(hover: hover)').matches; } catch(e){ canHover=true; }
     if(canHover){
-      brand.addEventListener('mouseenter', show);
-      brand.addEventListener('mouseleave', hide);
+      trigger.addEventListener('mouseenter', show);
+      trigger.addEventListener('mouseleave', hide);
     }
-    brand.addEventListener('focusin', show);
-    brand.addEventListener('focusout', hide);
+    trigger.addEventListener('focusin', show);
+    trigger.addEventListener('focusout', hide);
     brand.addEventListener('click', hide);
     window.addEventListener('scroll', hide, {passive:true});
   })();

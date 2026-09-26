@@ -1,0 +1,49 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: Inter, ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: #101013; color: #f4f3ef; font-size: 13px;
+  display: grid; place-items: center; padding: 12px; min-height: 100vh;
+}
+.mp {
+  width: min(620px, 100%);
+  border: 1px solid rgba(255,255,255,.14); border-radius: 14px;
+  background: #17171a; padding: 12px 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.4);
+}
+.mp-top { display: flex; align-items: center; gap: 8px; }
+.mp-logo {
+  display: grid; place-items: center; width: 26px; height: 26px;
+  border-radius: 8px; background: #355fe5; color: #fff; font-weight: 800;
+}
+.mp-name { font-weight: 800; letter-spacing: .08em; font-size: 12px; }
+.mp-live {
+  margin-left: auto; font-size: 10px; font-weight: 700; letter-spacing: .12em;
+  color: #7ee2a8; border: 1px solid rgba(126,226,168,.35); border-radius: 999px;
+  padding: 2px 8px;
+}
+.mp-hud { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0; }
+.mp-hud div { border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: 6px 10px; background: #1e1e22; }
+.mp-hud small { display: block; color: #8b8b8e; font-size: 10px; letter-spacing: .12em; }
+.mp-hud strong { font-size: 14px; }
+#map {
+  width: 100%; height: 300px; border-radius: 10px; background: #0b0b0d;
+  font: inherit;
+}
+#map .leaflet-container { font: inherit; }
+.car-dot {
+  width: 16px; height: 16px; border-radius: 50%;
+  background: #355fe5; border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.5);
+}
+.map-fallback {
+  display: grid; place-items: center; height: 100%;
+  color: #8b8b8e; font-size: 12px; text-align: center; padding: 20px;
+}
+.mp-foot { display: flex; gap: 8px; margin-top: 10px; }
+.mp-foot button {
+  flex: 1; border: 1px solid rgba(255,255,255,.16); border-radius: 9px;
+  background: #242429; color: #fff; font-weight: 650; font-size: 12px;
+  padding: 8px; cursor: pointer;
+}
+.mp-foot button:hover { background: #2d2d33; }

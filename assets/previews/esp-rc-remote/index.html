@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ESP RC Remote — Vehicle Control</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="rc">
+  <header class="rc-top">
+    <span class="rc-dot" id="link-dot"></span>
+    <span class="rc-name">ESP RC REMOTE</span>
+    <span class="rc-live">LIVE DEMO</span>
+  </header>
+  <div class="rc-grid">
+    <div class="rc-pad">
+      <small>STEERING</small>
+      <div class="stick" id="stick"><div class="knob" id="knob"></div></div>
+      <strong id="steer-val">0°</strong>
+    </div>
+    <div class="rc-tele">
+      <div><small>SPEED</small><strong><span id="speed">0</span> km/h</strong><div class="bar"><i id="speed-bar"></i></div></div>
+      <div><small>BATTERY</small><strong><span id="batt">87</span>%</strong><div class="bar"><i id="batt-bar" style="width:87%"></i></div></div>
+      <div><small>SIGNAL</small><strong id="sig">Excellent</strong></div>
+    </div>
+  </div>
+  <div class="rc-foot">
+    <button id="drive" type="button">HOLD TO DRIVE</button>
+    <button id="lights" type="button" aria-pressed="false">Lights: off</button>
+    <button id="power" type="button" aria-pressed="true">Power: on</button>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

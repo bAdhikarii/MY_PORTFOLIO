@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: Inter, ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: #f6f6f3; color: #121214; font-size: 13px;
+  display: grid; place-items: center; padding: 12px; min-height: 100vh;
+}
+.sm {
+  width: min(620px, 100%);
+  border: 1px solid rgba(18,18,20,.13); border-radius: 14px;
+  background: #fbfbf9; padding: 12px 14px;
+  box-shadow: 0 12px 30px rgba(18,18,20,.08);
+}
+.sm-top { display: flex; align-items: center; gap: 8px; }
+.sm-logo {
+  display: grid; place-items: center; width: 26px; height: 26px;
+  border-radius: 8px; background: #151518; color: #fff; font-weight: 800;
+}
+.sm-name { font-weight: 800; letter-spacing: .08em; font-size: 12px; }
+.sm-live {
+  margin-left: auto; font-size: 10px; font-weight: 700; letter-spacing: .12em;
+  color: #0f7a3d; border: 1px solid rgba(15,122,61,.35); border-radius: 999px;
+  padding: 2px 8px; background: rgba(15,122,61,.08);
+}
+.sm-hud { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0; }
+.sm-hud div { border: 1px solid rgba(18,18,20,.13); border-radius: 10px; padding: 6px 10px; background: #fff; }
+.sm-hud small { display: block; color: #67676a; font-size: 10px; letter-spacing: .12em; }
+.sm-hud strong { font-size: 15px; }
+#sim { width: 100%; height: auto; display: block; border-radius: 10px; background: #ececea; }
+.sm-foot { display: flex; gap: 8px; margin-top: 10px; }
+.sm-foot button {
+  flex: 1; border-radius: 9px; padding: 8px; font-weight: 650; font-size: 12px; cursor: pointer;
+  border: 1px solid rgba(255,255,255,.08); background: #151518; color: #fff;
+}
+.sm-foot button:hover { transform: translateY(-1px); }

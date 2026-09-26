@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>BT RC MAP — Demo Driving World</title>
+<meta name="description" content="Standalone demo map / virtual driving world for the BT RC Car project. Canvas, vanilla JS, offline.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="scene"></canvas>
+
+<!-- Top-left : brand -->
+<div class="hud hud-brand">
+  <div class="brand-title">BT RC MAP</div>
+  <div class="brand-sub">DEMO WORLD</div>
+</div>
+
+<!-- Top-right : GPS -->
+<div class="hud hud-gps">
+  <div class="gps-label">GPS</div>
+  <div class="gps-coords">X: <span id="gps-x">0</span> &nbsp;Y: <span id="gps-y">0</span></div>
+  <div class="gps-road">ROAD: <span id="gps-road">—</span></div>
+</div>
+
+<!-- Bottom-left : control hints -->
+<div class="hud hud-hints">
+  <div><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> / <kbd>←</kbd><kbd>↑</kbd><kbd>↓</kbd><kbd>→</kbd> drive</div>
+  <div><kbd>Space</kbd> brake &nbsp; <kbd>R</kbd> reset &nbsp; <kbd>C</kbd> camera</div>
+  <div><kbd>N</kbd> night &nbsp; <kbd>F3</kbd> debug &nbsp; drag / wheel: pan / zoom</div>
+</div>
+
+<!-- Bottom-center : vehicle -->
+<div class="hud hud-car">
+  <div class="car-cell"><small>SPEED</small><strong><span id="car-speed">0</span> km/h</strong></div>
+  <div class="car-cell"><small>HEADING</small><strong id="car-heading">E</strong></div>
+  <div class="car-cell"><small>MODE</small><strong id="car-mode">DRIVE</strong></div>
+  <div class="car-cell route-cell"><small>ROUTE</small><strong id="route-pct">0%</strong></div>
+</div>
+<div class="hud hud-offroad" id="offroad" hidden>OFF-ROAD · reduced traction</div>
+
+<!-- Bottom-right : minimap -->
+<div class="hud hud-mini">
+  <canvas id="minimap" width="172" height="172"></canvas>
+  <div class="mini-label">MINIMAP</div>
+</div>
+
+<!-- Floating map controls -->
+<div class="hud hud-controls">
+  <button id="btn-zoom-in" type="button" title="Zoom in">+</button>
+  <button id="btn-zoom-out" type="button" title="Zoom out">−</button>
+  <button id="btn-recenter" type="button" title="Center on vehicle">⌖</button>
+  <button id="btn-reset" type="button" title="Reset map">⟳</button>
+  <button id="btn-camera" type="button" title="Camera mode">📷</button>
+  <button id="btn-theme" type="button" title="Day / night">☾</button>
+</div>
+
+<!-- Selected object chip -->
+<div class="hud hud-selected" id="selected" hidden>
+  <strong id="selected-name">—</strong>
+  <span id="selected-meta">—</span>
+  <button id="selected-close" type="button" title="Clear selection">✕</button>
+</div>
+
+<!-- Debug panel -->
+<div class="hud hud-debug" id="debug" hidden>
+  <div><span>FPS</span><b id="dbg-fps">—</b></div>
+  <div><span>WORLD X/Y</span><b><span id="dbg-wx">—</span> / <span id="dbg-wy">—</span></b></div>
+  <div><span>CAM X/Y</span><b><span id="dbg-cx">—</span> / <span id="dbg-cy">—</span></b></div>
+  <div><span>ZOOM</span><b id="dbg-zoom">—</b></div>
+  <div><span>SPEED</span><b id="dbg-speed">—</b></div>
+  <div><span>NEAREST ROAD</span><b id="dbg-road">—</b></div>
+  <div><span>ON ROAD</span><b id="dbg-onroad">—</b></div>
+  <div><span>ROUTE</span><b id="dbg-route">—</b></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

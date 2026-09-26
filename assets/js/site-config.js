@@ -1,7 +1,7 @@
 window.SITE_CONFIG = Object.freeze({
-  email: "",
+  email: "badhikari2525@gmail.com",
   linkedin: "",
   github: "",
-  company: "",
+  company: "https://www.consicalabs.com/",
   resumePath: ""
 });
