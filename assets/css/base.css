@@ -42,6 +42,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: var(--background); }
+html, body { overflow-x: clip; }
 body {
   margin: 0;
   color: var(--foreground);
@@ -513,8 +514,8 @@ img, svg { display: block; max-width: 100%; }
 }
 
 /* Sections */
-.section { padding: 6.6rem 0; }
-.section.tight { padding: 4.9rem 0; }
+.section { padding: 5rem 0; }
+.section.tight { padding: 4rem 0; }
 .section.surface, .surface-section {
   border-block: 1px solid var(--border);
   background: color-mix(in srgb, var(--surface-3) 78%, transparent);
@@ -551,7 +552,7 @@ img, svg { display: block; max-width: 100%; }
 }
 .loop-node { color: var(--foreground); font-weight: 650; }
 .arrow-muted { color: var(--muted-2); }
-.snapshot { padding: 3.5rem 0; border-block: 1px solid var(--border); background: color-mix(in srgb, var(--surface-3) 76%, transparent); }
+.snapshot { padding: 3rem 0; border-block: 1px solid var(--border); background: color-mix(in srgb, var(--surface-3) 76%, transparent); }
 .snapshot-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 2rem; align-items: end; }
 .snapshot-name { font-family: var(--serif); font-size: 1.65rem; font-weight: 600; letter-spacing: -.035em; }
 .chips { display: flex; flex-wrap: wrap; gap: .45rem; }
@@ -612,8 +613,8 @@ img, svg { display: block; max-width: 100%; }
   display: grid;
   grid-template-columns: .92fr 1.08fr;
   align-items: center;
-  gap: 4rem;
-  padding: 3rem 0;
+  gap: 3.5rem;
+  padding: 2.5rem 0;
   border-bottom: 1px solid var(--border);
 }
 .project-index { display: flex; gap: .6rem; color: var(--muted-2); }
@@ -759,9 +760,9 @@ img, svg { display: block; max-width: 100%; }
   border-top: 1px solid var(--border);
   border-left: 1px solid var(--border);
 }
-.principle { min-height: 15rem; padding: 1.8rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.principle { min-height: 12rem; padding: 1.8rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .principle-no { margin: 0; color: var(--muted-2); font-size: .65rem; font-weight: 750; letter-spacing: .13em; }
-.principle h3 { margin: 2.5rem 0 0; font-family: var(--serif); font-size: 1.32rem; line-height: 1.25; letter-spacing: -.028em; font-weight: 600; }
+.principle h3 { margin: 1.75rem 0 0; font-family: var(--serif); font-size: 1.32rem; line-height: 1.25; letter-spacing: -.028em; font-weight: 600; }
 .principle p:last-child { color: var(--muted); font-size: .86rem; line-height: 1.65; }
 
 /* CTA */
@@ -775,7 +776,7 @@ img, svg { display: block; max-width: 100%; }
   border-radius: var(--radius-xl);
   background: #151518;
   color: #fff;
-  padding: 3.35rem 3.6rem;
+  padding: 2.75rem 3rem;
 }
 .dark .cta-panel { background: #ecebe7; color: #111113; }
 .cta-panel h2 { margin: .75rem 0 0; max-width: 50rem; font-size: clamp(2.6rem, 5vw, 4.1rem); line-height: .98; letter-spacing: -.05em; }
@@ -787,7 +788,7 @@ img, svg { display: block; max-width: 100%; }
 .page-intro .container {
   border-radius: var(--radius-xl);
   background: var(--surface);
-  padding: 4.7rem 5.1rem 4.8rem;
+  padding: 3.5rem 5.1rem 3.6rem;
 }
 .page-intro h1 {
   margin: .9rem 0 0;
@@ -799,6 +800,9 @@ img, svg { display: block; max-width: 100%; }
 }
 .page-intro .lead { max-width: 52rem; }
 .bio-kicker { margin: 0; font-family: var(--serif); font-size: 1.55rem; font-weight: 600; line-height: 1.45; letter-spacing: -.035em; }
+
+/* About page: justified reading text (scoped so other pages keep left alignment). */
+.page-about main p { text-align: justify; hyphens: auto; }
 
 /* Timeline */
 .timeline { position: relative; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--border); }
@@ -878,7 +882,7 @@ img, svg { display: block; max-width: 100%; }
 .disabled-link { cursor: not-allowed; opacity: .55; border-style: dashed; box-shadow: none; }
 
 /* Footer */
-.site-footer { margin-top: 1rem; border-top: 1px solid var(--border); padding: 3.8rem 0 2.5rem; }
+.site-footer { margin-top: 1rem; border-top: 1px solid var(--border); padding: 3rem 0 2.5rem; }
 .footer-grid { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 3.5rem; }
 .footer-grid p { margin: .4rem 0; color: var(--muted); font-size: .84rem; line-height: 1.66; }
 .footer-name { color: var(--foreground) !important; font-family: var(--serif); font-size: 1.2rem !important; font-weight: 600; letter-spacing: -.025em; }
