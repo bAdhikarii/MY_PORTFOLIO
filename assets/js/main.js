@@ -81,8 +81,11 @@
     card.className='brand-preview-card';
     var sig=document.createElement('img');
     sig.className='brand-preview-signature';
-    sig.src=prefix+'assets/images/signature.png';
-    sig.alt='Bikram Adhikari signature';
+    var usePhoto=false;
+    try { usePhoto=window.matchMedia('(max-width: 700px)').matches; } catch(e){}
+    sig.src=prefix+(usePhoto?'assets/images/bikram-adhikari-portrait.png':'assets/images/signature.png');
+    sig.alt=usePhoto?'Bikram Adhikari':'Bikram Adhikari signature';
+    if(usePhoto){ sig.classList.add('brand-preview-photo'); }
     sig.width=640; sig.height=433; sig.decoding='async';
     var name=document.createElement('p');
     name.className='brand-preview-name';
@@ -94,6 +97,13 @@
     bio.className='brand-preview-bio';
     bio.innerHTML='I co-founded <strong>Consica Labs</strong> with a vision to build meaningful technology for a global audience. As Founder &amp; CEO, I lead the development of products across <strong>AI, EdTech, SaaS, software, and robotics</strong>, turning ambitious ideas into real-world products, platforms, and technology ecosystems.';
     card.appendChild(sig); card.appendChild(name); card.appendChild(sub); card.appendChild(bio);
+    var closeBtn = document.createElement('button');
+    closeBtn.className = 'brand-preview-close';
+    closeBtn.type = 'button';
+    closeBtn.setAttribute('aria-label', 'Close profile card');
+    closeBtn.textContent = '×';
+    closeBtn.addEventListener('click', hide);
+    card.insertBefore(closeBtn, card.firstChild);
     overlay.appendChild(card);
     document.body.appendChild(overlay);
     function show(){ document.body.classList.add('brand-preview-open'); }
@@ -108,6 +118,7 @@
     trigger.addEventListener('focusin', show);
     trigger.addEventListener('focusout', hide);
     brand.addEventListener('click', hide);
+    window.addEventListener('keydown', function(e){ if(e && e.key === 'Escape') hide(); });
     window.addEventListener('scroll', hide, {passive:true});
     /* Mobile home: show the profile card on first load (no hover on touch).
        Hides on scroll, brand tap, or menu open like desktop. */

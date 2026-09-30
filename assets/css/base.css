@@ -638,11 +638,21 @@ img, svg { display: block; max-width: 100%; }
 }
 .project-visual.compact { aspect-ratio: 16 / 10; border-radius: var(--radius-lg); }
 .project-visual svg { position: absolute; inset: 0; width: 100%; height: 100%; }
-/* Live platform previews embedded on the Work page */
+/* Live platform previews embedded on the Work page.
+   Rendered at a fixed desktop width (1280px) and scaled down to fit, so the
+   sites always show their desktop layout — on desktop and mobile alike. */
+.project-visual { container-type: inline-size; }
 .project-visual iframe.preview-frame {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
+  position: absolute; top: 0; left: 0;
+  width: 1280px;
+  height: 800px;
+  max-width: none;
   border: 0; border-radius: inherit; background: #fff;
+  transform: scale(calc(100cqw / 1280px));
+  transform-origin: top left;
+}
+@supports not (width: 1cqw) {
+  .project-visual iframe.preview-frame { width: 100%; height: 100%; transform: none; }
 }
 .project-visual a.preview-shot {
   position: absolute; inset: 0; display: block;
@@ -1003,6 +1013,26 @@ body.brand-preview-open .brand-preview-overlay {
   transition: transform .25s ease;
 }
 body.brand-preview-open .brand-preview-card { transform: none; }
+/* Mobile close button (desktop dismisses via hover-out). Shown in mobile.css. */
+.brand-preview-card { position: relative; }
+.brand-preview-close {
+  position: absolute;
+  top: .6rem;
+  right: .6rem;
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface-3) 80%, transparent);
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+.brand-preview-close:hover { color: var(--foreground); border-color: var(--border-strong); }
 .brand-preview-signature {
   display: block;
   width: min(15rem, 62vw);
