@@ -1,11 +1,13 @@
 /* Mobile layout (max 700px) shared across all pages. Unwrapped rules. */
 :root { --header: 4.7rem; --radius-xl: 1.4rem; }
-  .container { width: min(calc(100% - 0.75rem), var(--container)); }
+  .desktop-nav { display: none; }
+  .menu-toggle { display: grid; }
+  .container { width: min(calc(100% - 2rem), var(--container)); }
   .resume-link { display: none; }
   .brand { font-size: .83rem; }
   .hero { padding-top: .95rem; }
   .hero-copy { padding: 3.2rem 1.45rem 2.3rem; top: 0; margin-bottom: 0; }
-  .hero h1 { font-size: clamp(3rem, 14.6vw, 4.55rem); }
+  .hero h1 { font-size: clamp(2.6rem, 12vw, 3.8rem); line-height: 1.02; }
   .hero .lead { font-size: .98rem; line-height: 1.62; }
   .hero-facts {
     grid-template-columns: 1fr;
@@ -25,17 +27,18 @@
   .hero-facts span:not(.fact-icon) { margin: 0; white-space: normal; }
   .hero-visual { min-height: 21rem; }
   .hero-visual::before { top: 1.1rem; right: .4rem; width: 82%; }
-  .hero-portrait { right: -.7rem; top: -.85rem; height: calc(100% + .85rem); max-width: 100%; }
-  .hero-system { width: 115%; right: -17%; top: -1rem; }
+  .hero-portrait { right: 0; top: -.85rem; height: calc(100% + .85rem); max-width: 100%; }
+  .hero-system { width: 100%; right: -5%; top: -1rem; }
   .hero-project-card { right: 1rem; bottom: .8rem; width: min(18.2rem, calc(100% - 2rem)); padding: 1.08rem; }
-  .hero-signature { width: min(8.5rem, 48%); height: auto; bottom: calc(100% + .3rem); }
+  .hero-signature { position: static; grid-column: 1 / -1; width: 7rem; height: auto; margin: 0 0 .9rem; }
   .project-strip { grid-template-columns: 1fr 1fr; padding: 1.5rem .1rem 0; gap: 0; }
   .strip-label { grid-column: 1 / -1; padding-bottom: .5rem; }
   .strip-item { border-top: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent); padding: .9rem .2rem; }
+  .project-strip .strip-item:last-child { grid-column: 1 / -1; }
   .strip-copy strong { font-size: .8rem; }
   .strip-copy small { font-size: .68rem; }
-  .section { padding: 4.8rem 0; }
-  .section.tight { padding: 3.8rem 0; }
+  .section { padding: 3.5rem 0; }
+  .section.tight { padding: 3rem 0; }
   .page-intro .container, .case-hero > .container { padding: 3.25rem 1.45rem; }
   .page-intro h1 { font-size: clamp(2.9rem, 13vw, 4.3rem); }
   .case-hero h1 { font-size: clamp(3.2rem, 15vw, 4.7rem); }
@@ -63,6 +66,8 @@
   pre, code { white-space: pre-wrap; overflow-wrap: anywhere; }
   p, h1, h2, h3, li { overflow-wrap: break-word; }
   .btn { min-height: 2.9rem; }
+  .hero .btn-row { flex-direction: column; align-items: stretch; }
+  .hero .btn-row .btn { width: 100%; }
   .project-visual { aspect-ratio: 16 / 10; }
   .selected-work .project-list { flex-direction: column; }
   .selected-work .project-row { flex: 1 1 auto; }
