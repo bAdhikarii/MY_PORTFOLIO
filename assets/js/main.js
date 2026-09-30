@@ -30,7 +30,7 @@
 
   var menuButton=document.querySelector('.menu-toggle');
   var mobile=document.getElementById('mobile-navigation');
-  if(menuButton&&mobile){menuButton.addEventListener('click',function(){var open=menuButton.getAttribute('aria-expanded')==='true';menuButton.setAttribute('aria-expanded',String(!open));menuButton.setAttribute('aria-label',open?'Open menu':'Close menu');mobile.hidden=open;});mobile.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mobile.hidden=true;menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open menu');});});}
+  if(menuButton&&mobile){menuButton.addEventListener('click',function(){var open=menuButton.getAttribute('aria-expanded')==='true';menuButton.setAttribute('aria-expanded',String(!open));menuButton.setAttribute('aria-label',open?'Open menu':'Close menu');mobile.hidden=open;document.body.classList.remove('brand-preview-open');});mobile.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mobile.hidden=true;menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open menu');});});}
 
   document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent=String(new Date().getFullYear());});
 
@@ -109,5 +109,12 @@
     trigger.addEventListener('focusout', hide);
     brand.addEventListener('click', hide);
     window.addEventListener('scroll', hide, {passive:true});
+    /* Mobile home: show the profile card on first load (no hover on touch).
+       Hides on scroll, brand tap, or menu open like desktop. */
+    try {
+      var isHome = !!document.querySelector('.hero');
+      var isMobileView = window.matchMedia('(max-width: 700px)').matches;
+      if (isHome && isMobileView) { window.setTimeout(show, 600); }
+    } catch(e) {}
   })();
 })();
